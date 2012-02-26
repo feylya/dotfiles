@@ -2,3 +2,10 @@
   default = tracking
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[user]
+	name = Paul O'Connor
+	email = feylya@gmail.com
+[github]
+  user = feylya
+[core]
+  excludesfile = /Users/poconnor/.gitignore_global
