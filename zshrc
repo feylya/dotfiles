@@ -1,17 +1,3 @@
-# Settings from original .zshrc
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
-plugins=(git pow brew rvm node pow)
-source $ZSH/oh-my-zsh.sh
-
-# recommended by brew doctor
-export PATH='/usr/local/bin:/usr/bin/local:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin'
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:/usr/local/Cellar/postgresql/9.1.2 # Workaround for PG gem install
-
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
@@ -77,3 +63,18 @@ setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# Settings from original .zshrc
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="robbyrussell"
+plugins=(git pow brew rvm node pow)
+source $ZSH/oh-my-zsh.sh
+
+# recommended by brew doctor
+export PATH='/usr/local/bin:/usr/bin/local:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/Cellar/postgresql/9.1.2 # Workaround for PG gem install
+
