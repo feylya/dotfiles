@@ -67,7 +67,7 @@ setopt EXTENDED_GLOB
 # Settings from original .zshrc
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git pow brew rvm node pow)
+plugins=(git pow brew rvm node pow lol)
 source $ZSH/oh-my-zsh.sh
 
 # recommended by brew doctor
@@ -78,3 +78,13 @@ export PATH='/usr/local/bin:/usr/bin/local:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/Cellar/postgresql/9.1.2 # Workaround for PG gem install
 
+# Setup Amazon EC2 Command-Line Tools
+export EC2_HOME=~/.ec2
+export AWS_RDS_HOME=~/.ec2/rds
+export AWS_ELB_HOME=~/.ec2
+export PATH=$PATH:$EC2_HOME/bin:$AWS_RDS_HOME/bin
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
+export AWS_IAM_HOME=~/.iamcli
+export PATH=$PATH:$AWS_IAM_HOME/bin
+export EC2_PRIVATE_KEY=`ls ~/.ec2/devops/pk-*.pem`
+export EC2_CERT=`ls ~/.ec2/devops/cert-*.pem`
